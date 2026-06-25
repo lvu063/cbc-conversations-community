@@ -153,7 +153,18 @@ function App() {
           {posts.map((post) => (
             <article key={post.id} className="post-card">
               <div className="post-header">
-                <span className="post-topic">{post.topic}</span>
+                <span className="post-topic">
+                  {(() => {
+                    const topicMap = {
+                      "CBC Gem": "CBC Gem",
+                            "CBC News": "CBC Nouvelles",
+                            "CBC Radio": "CBC Radio",
+                            "CBC Sports": "CBC Sports",
+                            "General": "Général",
+                    };
+                    return lang === "fr" && topicMap[post.topic] ? topicMap[post.topic] : post.topic;
+                  })()}
+                </span>
                 <span className="post-author">{post.author}</span>
               </div>
               <p className="post-text">{post.text}</p>

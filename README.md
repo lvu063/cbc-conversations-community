@@ -1,7 +1,5 @@
 # CBC Conversations Community
 
-Bilingual (FR/EN) community discussion platform built for CBC's Conversations and Community team mandate.
-
 ## Live Demo
 🌐 [communityconversation.netlify.app](https://communityconversation.netlify.app)
 
